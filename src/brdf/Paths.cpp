@@ -48,28 +48,48 @@ infringement.
 
 std::string getImagesPath()
 {
+#ifdef NDEBUG
+    return "./images/";
+#else
     return "../images/";
+#endif // NDEBUG
 }
 
 
 std::string getShaderTemplatesPath()
 {
+#ifdef NDEBUG
+    return "./shaderTemplates/";
+#else
     return "../shaderTemplates/";
+#endif // DEBUG
 }
 
 
 std::string getModelsPath()
 {
+#ifdef NDEBUG
+    return "./data/";
+#else
     return "../data/";
+#endif // DEBUG
 }
 
 
 std::string getProbesPath()
 {
+#ifdef NDEBUG
+    return "./probes/";
+#else
     return "../probes/";
+#endif // DEBUG
 }
 
 std::string getBRDFsPath()
 {
+#ifdef NDEBUG
+    return "./brdfs/";
+#else
     return "../brdfs/";
+#endif // DEBUG
 }
