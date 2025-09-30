@@ -48,23 +48,28 @@ infringement.
 
 std::string getImagesPath()
 {
-    return "./images/";
+    return "../images/";
 }
 
 
 std::string getShaderTemplatesPath()
 {
-    return "./shaderTemplates/";
+    return "../shaderTemplates/";
 }
 
 
 std::string getModelsPath()
 {
-    return "./data/";
+    return "../data/";
 }
 
 
 std::string getProbesPath()
 {
-    return "./probes/";
+    return "../probes/";
+}
+
+std::string getBRDFsPath()
+{
+    return "../brdfs/";
 }

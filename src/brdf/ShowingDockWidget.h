@@ -53,7 +53,7 @@ class ShowingDockWidget : public QDockWidget
     Q_OBJECT
 
 public:
-    ShowingDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 );
+    ShowingDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = Qt::WindowFlags() );
     
 private slots:
     void visibilityChanged ( bool visible );

@@ -52,5 +52,6 @@ std::string getImagesPath();
 std::string getShaderTemplatesPath();
 std::string getModelsPath();
 std::string getProbesPath();
+std::string getBRDFsPath();
 
 #endif

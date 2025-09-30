@@ -167,7 +167,8 @@ void BRDFMeasuredMERL::initGL()
     glf->glBindBuffer(GL_TEXTURE_BUFFER, 0);
 
     glf->glBindBuffer(GL_TEXTURE_BUFFER, tbo);
-    float* p = (float*)glf->glMapBuffer( GL_TEXTURE_BUFFER, GL_WRITE_ONLY );
+    //float* p = (float*)glf->glMapBuffer(GL_TEXTURE_BUFFER, GL_WRITE_ONLY);
+    float* p = (float*)glf->glMapBufferRange( GL_TEXTURE_BUFFER ,0, numBytes, GL_MAP_WRITE_BIT);
 
     memcpy( p, brdfData, numBytes );
     glf->glUnmapBuffer(GL_TEXTURE_BUFFER);

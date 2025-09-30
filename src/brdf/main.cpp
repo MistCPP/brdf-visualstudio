@@ -45,7 +45,7 @@ infringement.
 
 #include <fstream>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QMessageBox>
 #include "MainWindow.h"
 #include "ParameterWindow.h"
@@ -104,8 +104,8 @@ int main(int argc, char *argv[])
 
     
     // center the window in the middle of the default screen
-    QDesktopWidget desktopWidget;
-    QRect rect = desktopWidget.screenGeometry();
+	QScreen* primaryScreen = QGuiApplication::primaryScreen();
+	QRect rect = primaryScreen->geometry();
     rect.adjust( 60, 60, -60, -60 );
 
     MainWindow main;
@@ -121,6 +121,13 @@ int main(int argc, char *argv[])
         for( int i = 1; i < argc; i++ )           
             files.push_back( std::string(argv[i]) );
         main.getParameterWindow()->openBRDFFiles( files );
+    }
+    else
+    {
+		//=>init default brdf
+        std::vector<std::string> files;
+        files.push_back(getBRDFsPath() + "/blinn.brdf");
+        main.getParameterWindow()->openBRDFFiles(files);
     }
     
     return app.exec();

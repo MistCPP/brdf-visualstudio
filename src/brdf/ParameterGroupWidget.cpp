@@ -94,7 +94,7 @@ ParameterGroupWidget::ParameterGroupWidget( ParameterWindow* pWindow, BRDFBase* 
 
     // now let's get to the layout
     QVBoxLayout *layout = new QVBoxLayout;
-    layout->setMargin( 0 );
+    //layout->setMargin( 0 );
     layout->setContentsMargins( 0, 0, 0, 0 );
 
     // the parameter window needs to know to emit changes whenever this BRDF is reloaded
@@ -116,7 +116,7 @@ ParameterGroupWidget::ParameterGroupWidget( ParameterWindow* pWindow, BRDFBase* 
     QFrame* cmdFrame = new QFrame;
 
     QHBoxLayout* cmdLayout = new QHBoxLayout;
-    cmdLayout->setMargin( 0 );
+    //cmdLayout->setMargin( 0 );
     cmdLayout->setContentsMargins( 0, 0, 0, 0 );
     cmdLayout->setSpacing( 11 );
     cmdFrame->setLayout( cmdLayout );
@@ -191,7 +191,7 @@ ParameterGroupWidget::ParameterGroupWidget( ParameterWindow* pWindow, BRDFBase* 
     // make the container frame and its layout
     containerFrame = new QFrame;
     containerLayout = new QVBoxLayout( 0 );
-    containerLayout->setMargin( 0 );
+    //containerLayout->setMargin( 0 );
     containerLayout->setContentsMargins( 0, 0, 0, 0 );
     containerLayout->addWidget( cmdFrame );
     containerLayout->setSpacing( 2 );

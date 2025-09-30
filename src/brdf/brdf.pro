@@ -1,6 +1,8 @@
 TEMPLATE = app
 CONFIG += qt5  #debug
 
+prefix= /path/to/destination/
+
 isEmpty(prefix) {
 	prefix = $$system(pf-makevar --absolute root 2>/dev/null)
 }

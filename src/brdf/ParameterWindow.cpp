@@ -125,7 +125,8 @@ void ParameterWindow::createLayout()
     QFrame* cmdFrame = new QFrame;
     cmdFrame->setSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed );
     cmdLayout = new QVBoxLayout;
-    cmdLayout->setMargin( 5 );
+    //cmdLayout->setMargin( 5 );
+	cmdLayout->setContentsMargins(5, 5, 5, 5);
     
 
 

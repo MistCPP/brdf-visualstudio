@@ -84,7 +84,8 @@ void GLContext::initOpenGLContext(QWindow *window)
 
         glcontext->makeCurrent(window);
 
-        glf = glcontext->versionFunctions<GlFuncs>();
+        //glf = glcontext->versionFunctions<GlFuncs>();
+        glf = glcontext->extraFunctions();
 
         if(!glf) {
           qCritical() << "Error: OpenGL " << OPENGL_MAJOR_VERSION << "." << OPENGL_MINOR_VERSION << " functions initialization failed! -- exiting...";

@@ -65,6 +65,7 @@ infringement.
 #include <QWindow>
 
 #include OPENGL_CORE_FUNCS_INCLUDE
+#include <QOpenGLExtraFunctions>
 
 #include "ShowingBase.h"
 #include "glerror.h"
@@ -84,7 +85,8 @@ A bit of a hack, but it works.
 class GLContext
 {
 public:
-    typedef OPENGL_CORE_FUNCS GlFuncs;
+    //typedef OPENGL_CORE_FUNCS GlFuncs;
+    typedef QOpenGLExtraFunctions GlFuncs;
 
     static void initOpenGLContext(QWindow *window);
     static void cleanOpenGLContext();

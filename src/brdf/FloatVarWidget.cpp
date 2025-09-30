@@ -76,7 +76,7 @@ FloatVarWidget::FloatVarWidget(QString name, float minVal, float maxVal, float d
     layout->addWidget( edit );
     connect(edit, SIGNAL(setToDefault()), this, SLOT(setToDefault()));
 
-    layout->setMargin( 0 );
+    //layout->setMargin( 0 );
     layout->setContentsMargins( 0, 2, 0, 3 );
 
     setSizePolicy( QSizePolicy::Preferred, QSizePolicy::Fixed );

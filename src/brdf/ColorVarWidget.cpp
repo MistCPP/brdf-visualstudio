@@ -79,7 +79,8 @@ ColorVarWidget::ColorVarWidget(QString name, float r, float g, float b)
 
 	// layout stuff
 	setContentsMargins( 0, 0, 0, 0 );
-	layout->setMargin( 1 );
+	//layout->setMargin( 1 );
+	layout->setContentsMargins(1, 1, 1, 1);
 	setSizePolicy( QSizePolicy::Preferred, QSizePolicy::Fixed );
 
 	setLayout(layout);
