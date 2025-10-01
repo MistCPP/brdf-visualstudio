@@ -736,6 +736,12 @@ void IBLWidget::brdfListChanged( std::vector<brdfPackage> brdfList )
 {
     brdfs = brdfList;
 
+    if (!brdfs.size())
+    {
+		lastBRDFUsed = NULL;
+        return;
+    }
+
     if( brdfs[0].brdf != lastBRDFUsed )
     {
         if( brdfs[0].brdf && brdfs[0].brdf->hasISFunction() )

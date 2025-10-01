@@ -125,9 +125,7 @@ int main(int argc, char *argv[])
     else
     {
 		//=>init default brdf
-        std::vector<std::string> files;
-        files.push_back(getBRDFsPath() + "/blinn.brdf");
-        main.getParameterWindow()->openBRDFFiles(files);
+        main.getParameterWindow()->openBRDFFile(getBRDFsPath() + "/disney.brdf",true);
     }
     
     return app.exec();
